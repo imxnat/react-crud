@@ -4,7 +4,7 @@ import { BsPersonPlus, BsPeople, BsPencilSquare } from 'react-icons/bs'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand navbar-light nav-bg" >
+        <nav className="navbar navbar-expand navbar-light nav-bg justify-content-center" >
             <div className="nav navbar-nav" >
                 <Link style={{color:'white'}} className="nav-item nav-link" to="/"><BsPeople/>  System</Link>
                 <Link style={{color:'white'}} className="nav-item nav-link" to="/create"><BsPersonPlus/>  Create</Link>

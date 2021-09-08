@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import AlertSuccess from "./AlertSuccess"
 
 const Create = ({ onCreate }) => {
@@ -9,24 +9,24 @@ const Create = ({ onCreate }) => {
 
     const [alerts, setAlert] = useState(false)
 
-
+    let history = useHistory();
 
     const onSubmit = (e) => {
 
         // this method prevent to not refresh the page
         e.preventDefault();
-
+        // add this fields
         onCreate({ name, email });
-
+        //clear fields
         setName('')
         setEmail('')
-
+        //show succed message Alert
         setAlert(!alerts)
-        setTimeout(() => setAlert(false), [5000])
+        setTimeout(() => setAlert(false), [3000])
+        // useHistory for navigating back to and instance
+        setTimeout(() => history.push("/") , [1000])
 
     }
-
-  
 
     return (
         <div>

@@ -5,6 +5,7 @@
     🟣 **Delete** employee  
     🟣 **Edit** employee  
 - Getting data with **useEffect Hook and Fetch**
+- Implemented **useHistory** hook for navigating back to an instance.
 - Routing between components using **react-router-dom**
 - **Forms** validation
 - Trigger "Success Message" **Alert** when submit

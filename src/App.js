@@ -8,7 +8,34 @@ import { useState } from 'react';
 
 function App() {
 
-    const [employees, setEmployees] = useState([])
+    const [employees, setEmployees] = useState([      
+      {
+        id:"5297",
+        name: "Nathalie Rivas",
+        email: "nathalier.dev@gmail.com"
+      },
+      {
+        id:"5321",
+        name: "Raydesite CA",
+        email: "raydesite@gmail.com"
+      },
+      {
+        id:"5412",
+        name: "Pedrito Alimaña",
+        email: "pedritoA@out.com"
+      },
+      {
+        id:"9297",
+        name: "Empleado Dev",
+        email: "empleado@raydesite.com"
+      },
+      {
+        id:"5997",
+        name: "Empleado UI",
+        email: "uidesigner@raydesite.com"
+      },
+    ])
+
   
     // Create Employee
   const createEmployee = (employee) => {
@@ -20,6 +47,10 @@ function App() {
     setEmployees([...employees, newEmployee])
   }
 
+  // delete employee
+  const deleteEmployee = (id) => {
+    setEmployees(employees.filter((employee) => employee.id !== id))
+  }
 
   return (
     <Router>
@@ -27,12 +58,14 @@ function App() {
       <br/>
       <div className="App">
         <Route exact path="/">
-            <List listEmployee={employees} />
+            <List listEmployee={employees} onDelete={deleteEmployee} />
         </Route>
         <Route exact path="/create">
             <Create onCreate={createEmployee} />
         </Route>
         <Route exact path="/edit" component={Edit} />
+        {/* edit especific employee */}
+        <Route exact path="/edit/:id" component={Edit} />
 
       </div>
     </Router>

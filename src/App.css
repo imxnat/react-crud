@@ -1,6 +1,4 @@
-*{
-    font-family: 'Poppins ', sans-serif;
-}
+
 .App{
     display: flex;
     justify-content: center;
@@ -14,7 +12,11 @@
     height: 64px;
 }
 .nav-item{
-    width: 120px;
+    width: 150px;
+    text-align: center;
+}
+.nav-item:hover{
+    border-bottom: 2px solid white;
 }
 
 .nav-bg{
@@ -28,5 +30,18 @@
 }
 .form-group{
     margin-bottom: 1.5rem;
+}
+.table-head{
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+h5{
+    padding: 1rem 0 1rem 0;
+    color: royalblue;
+    text-align: center;
 }
 
