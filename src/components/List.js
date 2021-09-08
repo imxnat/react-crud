@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-const List = () => {
+const List = ({ listEmployee }) => {
 
         const [employees, setEmployees] = useState([]);
 
@@ -19,8 +19,14 @@ const List = () => {
 
     return (
         
-        <table className="table table-hover">
-            <thead>
+        <div className="card">
+            <div className="card-header">
+            <Link to="/create" className="btn btn-success">Add new Employee</Link>
+            </div>
+            <div className="card-body">
+                <h4>Employees List</h4>
+            <table className="table table-hover table-bordered">
+            <thead className="table-dark">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
@@ -29,7 +35,7 @@ const List = () => {
                 </tr>
             </thead>
             <tbody>
-                {employees.map(employee => (
+                {listEmployee.map(employee => (
 
                 <tr key={employee.id}>
                     <td>{employee.id}</td>
@@ -46,6 +52,11 @@ const List = () => {
              ))} 
             </tbody>
         </table>
+            </div>
+                <div className="card-footer text-muted">
+            </div>
+        </div>
+        
     )
 }
 

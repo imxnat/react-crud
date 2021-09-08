@@ -1,3 +1,6 @@
+*{
+    font-family: 'Poppins ', sans-serif;
+}
 .App{
     display: flex;
     justify-content: center;
@@ -8,10 +11,22 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 4rem;
+    height: 64px;
 }
+.nav-item{
+    width: 120px;
+}
+
 .nav-bg{
-    background-color: #61dafb;
+    background-color: royalblue;
 }
 .card{
     width: 80vw;
 }
+.btn-group{
+    margin-top: 0.5rem;
+}
+.form-group{
+    margin-bottom: 1.5rem;
+}
+
