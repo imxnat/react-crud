@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# 👩‍💻 Topics self-learned and implemented in the making of this App🚀
+
+- **State Management** with Hooks  
+    🟣 **Add** new employee  
+    🟣 **Delete** employee  
+    🟣 **Edit** employee  
+- Getting data with **useEffect Hook and Fetch**
+- Routing between components using **react-router-dom**
+- **Forms** validation
+- Trigger "Success Message" **Alert** when submit
+- Used **React icons** for the UI
+- Implement **Bootstrap Framework** for the UI with some custom improvements
+- Conditional rendering
+
+
+***
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
