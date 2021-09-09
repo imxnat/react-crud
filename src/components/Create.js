@@ -38,7 +38,7 @@ const Create = ({ onCreate }) => {
             <div className="card-body">
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
-                      <label htmlFor="">Name:</label>
+                      <label htmlFor="">Full Name</label>
                       <input 
                         type="text" 
                         value={name}
@@ -51,7 +51,7 @@ const Create = ({ onCreate }) => {
                     </div>
 
                     <div className="form-group">
-                      <label htmlFor="">Email:</label>
+                      <label htmlFor="">Email</label>
                       <input 
                         type="email" 
                         value={email}

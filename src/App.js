@@ -52,6 +52,20 @@ function App() {
     setEmployees(employees.filter((employee) => employee.id !== id))
   }
 
+  // //edit employee
+  // const [editEmployee, setEditEmployee] = useState(
+  //   {
+  //     name: '', 
+  //     email: ''
+  //   });
+
+  // const editRow = (employee) => {
+  //   setEditEmployee({
+  //     name: employee.name,
+  //     email: employee.email
+  //   })
+  // }
+
   return (
     <Router>
       <Navbar className="Navbar" />
@@ -63,9 +77,13 @@ function App() {
         <Route exact path="/create">
             <Create onCreate={createEmployee} />
         </Route>
-        <Route exact path="/edit" component={Edit} />
+        <Route exact path="/edit">
+          <Edit />  
+        </Route>
         {/* edit especific employee */}
-        <Route exact path="/edit/:id" component={Edit} />
+        <Route exact path="/edit/:id">
+          <Edit  />  
+        </Route>
 
       </div>
     </Router>

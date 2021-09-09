@@ -1,8 +1,10 @@
-// import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { FcAcceptDatabase } from 'react-icons/fc';
+import { BsPersonPlus } from 'react-icons/bs';
+
 
 const List = ({ listEmployee, onDelete }) => {
-    
+
         // eslint-disable-next-line
         // const [employees, setEmployees] = useState([]);
 
@@ -22,10 +24,10 @@ const List = ({ listEmployee, onDelete }) => {
         
         <div className="card">
             <div className="card-header">
-            <Link to="/create" className="btn btn-success">Add new Employee</Link>
+            <Link to="/create" className="btn btn-success"><BsPersonPlus/> Add new Employee</Link>
             </div>
             <div className="card-body">
-                <h5>Employees Database 🖥️</h5>
+                <h5><FcAcceptDatabase/>  Employees Database</h5>
             <table className="table table-hover table-bordered border-primary">
             <thead className="table-head">
                 <tr>
@@ -46,7 +48,6 @@ const List = ({ listEmployee, onDelete }) => {
                         <div className="btn-group" role="group" aria-label="">
                             {/* //edit employee */}
                             <Link to={"/edit/"+employee.id} className="btn btn-warning"
-                                                        
                             >Edit</Link>
                             {/* Delete employee */}
                             <button type="button" className="btn btn-danger" 
